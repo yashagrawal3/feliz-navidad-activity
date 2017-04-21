@@ -24,7 +24,6 @@ class Navidad(activity.Activity):
 		
 		self.Toolbar = ToolbarBox()
 		self.Toolbar.toolbar.insert(cs,-1)
-		self.Toolbar.toolbar.insert(c,-1)
 		self.F = ToolButton('F')
 		self.Toolbar.toolbar.insert(self.F,-1)
 		self.cambiado = False
@@ -41,10 +40,6 @@ class Navidad(activity.Activity):
 		self.Z = ToolButton('Z')
 		self.Toolbar.toolbar.insert(self.Z,-1)
 
-		a = gtk.SeparatorToolItem()
-		a.set_expand(True)
-		a.props.draw = False
-		self.Toolbar.toolbar.insert(a,-1)
 
 
 		self.N = ToolButton('N')
@@ -72,7 +67,6 @@ class Navidad(activity.Activity):
 		b = gtk.SeparatorToolItem()
 		b.set_expand(True)
 
-		self.Toolbar.toolbar.insert(b,-1)
 		self.Toolbar.toolbar.insert(Stop,-1)
 		self.vox = gtk.EventBox()
 		vs = gtk.VBox()
@@ -82,7 +76,7 @@ class Navidad(activity.Activity):
 		bs = gtk.TextBuffer()
 		bs.set_text('El equipo de CeibalJAM! te desea feliz navidad y prospero año nuevo')
 		entry = gtk.TextView(bs)
-		fuente = pango.FontDescription('Purisa 16')
+		fuente = pango.FontDescription('11')
 		entry.set_editable(False)
 		entry.modify_font(fuente)
 		self.vox.connect('button-release-event',self.color,entry)
