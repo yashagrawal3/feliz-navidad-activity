@@ -1,6 +1,6 @@
 [Activity]
 name = Feliz Navidad
-activity_version = 2
+activity_version = 3
 show_launcher = 1
 bundle_id = org.ceibaljam.FelizNavidad
 exec = sugar-activity activity.Navidad -s 
