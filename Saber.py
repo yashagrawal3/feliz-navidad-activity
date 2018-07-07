@@ -5,7 +5,8 @@
 # Ignacio Rodríguez <nachoel01@gmail.com>
 # CeibalJAM! - Uruguay
 from datetime import date
-import gtk
+from gi.repository import Gtk
+from gi.repository import Gdk
 hoy = date.today()
 navidad = date(hoy.year,12,24)
 anonuevo = date(hoy.year+1,1,1)
@@ -20,8 +21,8 @@ def saber():
 		return 'Faltan ' + str(faltan.days) + ' días para navidad y '+ str(faltanc.days-1) + ' días para año nuevo'
 def color(label):
 	if faltan.days == 0 or faltanc.days == 0: 
-		label.modify_fg(gtk.STATE_NORMAL,gtk.gdk.color_parse('blue'))
+		label.modify_fg(Gtk.StateType.NORMAL,Gdk.color_parse('blue'))
 	else:
-		label.modify_fg(gtk.STATE_NORMAL,gtk.gdk.color_parse('yellow'))
+		label.modify_fg(Gtk.StateType.NORMAL,Gdk.color_parse('yellow'))
 	label.show_all()
 print saber()
